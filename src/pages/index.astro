@@ -1,5 +1,8 @@
 ---
+import "../styles/global.css";
 
+import { Image } from 'astro:assets';
+import heroImage from '../assets/Dorrit_Chrisoph_1©laurreethomas.avif';
 ---
 
 <html lang="en">
@@ -12,6 +15,138 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<body class="antialiased">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-[#faf9f6] border-b border-[#d4cfc4] flex items-center justify-between px-12 h-16">
+    <div class="font-serif-display text-[15px] tracking-[0.12em] uppercase font-normal text-[#1a1a18]">
+      Bauerecker · Stöber
+    </div>
+    <ul class="flex gap-10 list-none">
+      <li><a href="#" class="text-[11px] tracking-[0.14em] uppercase text-[#5a5850] hover:text-[#1a1a18] transition-colors duration-200 font-normal no-underline">Startseite</a></li>
+     <!--  <li><a href="#" class="text-[11px] tracking-[0.14em] uppercase text-[#5a5850] hover:text-[#1a1a18] transition-colors duration-200 font-normal no-underline">Über uns</a></li>
+      <li><a href="#" class="text-[11px] tracking-[0.14em] uppercase text-[#5a5850] hover:text-[#1a1a18] transition-colors duration-200 font-normal no-underline">Konzerte</a></li>
+      <li><a href="#" class="text-[11px] tracking-[0.14em] uppercase text-[#5a5850] hover:text-[#1a1a18] transition-colors duration-200 font-normal no-underline">Medien</a></li>
+      <li><a href="#" class="text-[11px] tracking-[0.14em] uppercase text-[#5a5850] hover:text-[#1a1a18] transition-colors duration-200 font-normal no-underline">Kontakt</a></li>-->
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div>
+    <!-- Vollbreites Bild (querformat, zentriert wie im Original) -->
+    <div class="w-full overflow-hidden flex items-center justify-center">
+      <div class="flex flex-col items-center gap-3">
+          <i class="ti ti-camera" aria-hidden="true"></i>
+        </div>
+		  <Image src={heroImage} alt="Beschreibung" />
+
+	</div>
+    </div>
+
+    <!-- Text darunter, zentriert -->
+    <div class="max-w-3xl mx-auto px-8 py-16 text-center">
+      <p class="text-[10px] tracking-[0.22em] uppercase text-[#8a877e] mb-5">Klavierduo · Köln</p>
+      <h1 class="font-serif-display text-[52px] font-light leading-[1.15] text-[#1a1a18] mb-10">
+        Bauerecker <em>&amp;</em> Stöber
+      </h1>
+      <div class="border-l border-[#c8c3b8] pl-5 mb-8 text-left max-w-xl mx-auto">
+        <p class="font-serif-display text-[17px] italic leading-relaxed text-[#5a5850]">
+          Mit ihrem lebendigen Zusammenspiel schaffen es Bauerecker und Stöber mühelos, die Aufmerksamkeit des Publikums auf ganzer Länge wach zu halten.
+        </p>
+        <cite class="block mt-2 text-[11px] tracking-[0.12em] uppercase text-[#8a877e] not-italic font-normal">
+          — Alexander Kleinschrodt
+        </cite>
+      </div>
+      <p class="text-[14px] leading-[1.85] text-[#4a4840] font-light text-left max-w-xl mx-auto">
+        Das Klavierduo Bauerecker Stöber haben Dorrit Bauerecker und Christoph Stöber Mitte 2023 gegründet. Ziel und Idee ist es, das weitgefächerte Repertoire der vierhändigen Klaviermusik vom Barock bis ins 21. Jahrhundert zu erforschen und neue Verknüpfungen zu schaffen. Die beiden Pianist:innen wollen Genregrenzen aufweichen und so neue Konzertpublika erreichen.
+      </p>
+    </div>
+  </div>
+
+  <!-- KONZERTE -->
+  <!-- <section class="bg-[#f3f0eb] px-12 py-20">
+    <div class="flex items-baseline gap-6 mb-12">
+      <h2 class="font-serif-display text-[36px] font-light text-[#1a1a18]">Konzerte</h2>
+      <div class="flex-1 h-px bg-[#d4cfc4]"></div>
+    </div>
+
+    <div>
+    
+      <div class="grid items-center gap-8 py-7 border-t border-b border-[#d4cfc4]" style="grid-template-columns: 80px 1fr auto;">
+        <div class="text-center">
+          <span class="block text-[10px] tracking-[0.16em] uppercase text-[#8a877e]">Mi.</span>
+          <span class="block font-serif-display text-[40px] font-light text-[#1a1a18] leading-none">30</span>
+          <span class="block text-[10px] tracking-[0.14em] uppercase text-[#8a877e] mt-0.5">Sept. 2026</span>
+        </div>
+        <div>
+          <div class="font-serif-display text-[20px] font-normal text-[#1a1a18] mb-1">four handed / Domforum Köln</div>
+          <div class="text-[12px] tracking-[0.06em] text-[#6a6860] mb-1">
+            <i class="ti ti-map-pin text-[12px] mr-1 align-middle" aria-hidden="true"></i>Domkloster 3, 50667 Köln
+          </div>
+          <div class="text-[12px] text-[#8a877e] italic">Debütprogramm — vierhändige Klaviermusik vom Barock bis zur Gegenwart</div>
+        </div>
+        <div class="flex flex-col items-end gap-3">
+          <span class="text-[12px] text-[#8a877e] tracking-[0.06em]">19:30 Uhr</span>
+          <a href="#" class="inline-block text-[10px] tracking-[0.18em] uppercase border border-[#a8a49a] text-[#5a5850] px-4 py-2 hover:bg-[#1a1a18] hover:text-[#faf9f6] hover:border-[#1a1a18] transition-all duration-200 no-underline font-normal">
+            Details
+          </a>
+        </div>
+      </div>
+
+    
+      <div class="grid items-center gap-8 py-7 border-b border-[#d4cfc4]" style="grid-template-columns: 80px 1fr auto;">
+        <div class="text-center">
+          <span class="block text-[10px] tracking-[0.16em] uppercase text-[#8a877e]">Do.</span>
+          <span class="block font-serif-display text-[40px] font-light text-[#1a1a18] leading-none">01</span>
+          <span class="block text-[10px] tracking-[0.14em] uppercase text-[#8a877e] mt-0.5">Okt. 2026</span>
+        </div>
+        <div>
+          <div class="font-serif-display text-[20px] font-normal text-[#1a1a18] mb-1">four handed / Burghaus Bielstein</div>
+          <div class="text-[12px] tracking-[0.06em] text-[#6a6860] mb-1">
+            <i class="ti ti-map-pin text-[12px] mr-1 align-middle" aria-hidden="true"></i>Burgstraße 9, 51674 Wiehl
+          </div>
+          <div class="text-[12px] text-[#8a877e] italic">Debütprogramm — vierhändige Klaviermusik vom Barock bis zur Gegenwart</div>
+        </div>
+        <div class="flex flex-col items-end gap-3">
+          <span class="text-[12px] text-[#8a877e] tracking-[0.06em]">19:30 Uhr</span>
+          <a href="#" class="inline-block text-[10px] tracking-[0.18em] uppercase border border-[#a8a49a] text-[#5a5850] px-4 py-2 hover:bg-[#1a1a18] hover:text-[#faf9f6] hover:border-[#1a1a18] transition-all duration-200 no-underline font-normal">
+            Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+  <!-- KONTAKT -->
+  <section class="px-12 py-20">
+    <div class="max-w-lg mx-auto text-center">
+      <h2 class="font-serif-display text-[36px] font-light text-[#1a1a18] mb-6">Kontakt aufnehmen</h2>
+      <p class="font-serif-display text-[18px] italic text-[#6a6860] leading-relaxed mb-8">
+        Anfragen zu Konzerten, Kooperationen und Presse sind herzlich willkommen.
+      </p>
+      <a href="mailto:mail@bauerecker-stoeber.de" class="text-[13px] tracking-[0.1em] text-[#1a1a18] border-b border-[#1a1a18] pb-0.5 no-underline hover:text-[#5a5850] hover:border-[#5a5850] transition-colors duration-200">
+        mail@bauerecker-stoeber.de
+      </a>
+      <div class="flex gap-4 justify-center mt-10">
+        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full border border-[#d4cfc4] flex items-center justify-center text-[#8a877e] text-base hover:border-[#1a1a18] hover:text-[#1a1a18] transition-all duration-200 no-underline">
+          <i class="ti ti-brand-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-[#d4cfc4] flex items-center justify-center text-[#8a877e] text-base hover:border-[#1a1a18] hover:text-[#1a1a18] transition-all duration-200 no-underline">
+          <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#d4cfc4] px-12 py-6 flex items-center justify-between bg-[#faf9f6]">
+    <span class="text-[11px] text-[#8a877e] tracking-[0.06em]">© 2024 Christoph Stöber &amp; Dorrit Bauerecker</span>
+    <div class="flex gap-6">
+      <a href="#" class="text-[11px] tracking-[0.1em] uppercase text-[#8a877e] hover:text-[#1a1a18] transition-colors duration-200 no-underline">Impressum</a>
+      <a href="#" class="text-[11px] tracking-[0.1em] uppercase text-[#8a877e] hover:text-[#1a1a18] transition-colors duration-200 no-underline">Datenschutz</a>
+    </div>
+  </footer>
+
+</body>
 	</body>
 </html>
